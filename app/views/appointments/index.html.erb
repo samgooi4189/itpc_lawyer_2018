@@ -4,26 +4,7 @@
   <div class="container">
     <div class="columns">
           <% @appointments.each do |appointment| %>
-            <div class="box">
-              <div class="media-left">
-                <strong><%= appointment.schedule_for %></strong>
-                <small><%= appointment.title %></small>
-                <p><%= appointment.notes %></p>
-              </div>
-              <nav class="level">
-                <div class="level-left is-mobile">
-                  <%= link_to appointment, class: "level-item" do %>
-                    <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-                  <% end %>
-                  <%= link_to edit_appointment_path(appointment), class: "level-item" do %>
-                    <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                  <% end %>
-                  <%= link_to appointment, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                    <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                  <% end %>
-                </div>
-              </nav>
-            </div>
+            <%= render 'card', appointment: appointment %>
           <% end %>
     </div>
   </div>
