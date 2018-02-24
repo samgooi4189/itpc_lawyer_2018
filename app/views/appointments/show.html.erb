@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @appointment.title %>
-</p>
+<div class="level">
+  <div class="column is-centered">
+    <div class="columns level-item">
+      <span class="column is-half title is-3 has-text-right">Title:</span>
+      <span class="column is-half has-text-left"><%= @appointment.title %></span>
+    </div>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @appointment.notes %>
-</p>
+    <div class="columns level-item">
+      <span class="column is-half title is-3 has-text-right">Notes:</span>
+      <span class="column is-half has-text-left"><%= @appointment.notes %></span>
+    </div>
 
-<p>
-  <strong>Schedule for:</strong>
-  <%= @appointment.schedule_for %>
-</p>
+    <div class="columns level-item">
+      <span class="column is-half title is-3 has-text-right">Time being scheduled: </span>
+      <span class="column is-half has-text-left"><%= @appointment.schedule_for %></span>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>
