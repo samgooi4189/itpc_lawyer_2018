@@ -1,1 +1,1 @@
-rvm use 2.4.3@lawyer --create
+rvm use 2.3.4@lawyer --create
