@@ -1,1 +1,1 @@
-rvm use 2.4@my_scheduler --create
+rvm use 2.4.3@lawyer --create
